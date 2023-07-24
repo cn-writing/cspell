@@ -1,4 +1,4 @@
-FROM node:20.4.0-alpine
+FROM node:20.5.0-alpine
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 ARG CSPELL_VERSION="6.12.0"
