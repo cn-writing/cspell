@@ -1,7 +1,7 @@
 FROM node:22.14.0-alpine
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
-# renovate: datasource=npm depName=cspell versioning=semver
+# renovate: datasource=npm depName=cspell
 ARG CSPELL_VERSION="8.17.3"
 
 # Install other tools
