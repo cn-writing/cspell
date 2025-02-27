@@ -4,4 +4,7 @@ LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 # renovate: datasource=npm depName=cspell versioning=semver
 ARG CSPELL_VERSION="8.17.3"
 
+# Install other tools
+RUN apk add --no-cache make
+
 RUN npm install --global cspell@${CSPELL_VERSION}
