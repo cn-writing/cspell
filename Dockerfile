@@ -7,7 +7,7 @@ ENV CSPELL_VERSION="8.17.5"
 # Install other tools
 RUN apk add --no-cache make
 
-RUN npm install --global \
+RUN npm install --global npm@latest \
     cspell@${CSPELL_VERSION} \
     @cspell/dict-aws \
     @cspell/dict-bash \
