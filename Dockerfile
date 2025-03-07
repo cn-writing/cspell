@@ -14,6 +14,8 @@ RUN npm install --global npm@latest \
     @cspell/dict-companies \
     @cspell/dict-data-science \
     @cspell/dict-docker \
+    @cspell/dict-en-gb \
+    @cspell/dict-en-common-misspellings \
     @cspell/dict-es-es \
     @cspell/dict-git \
     @cspell/dict-google \
@@ -30,6 +32,8 @@ RUN cspell link add @cspell/dict-aws && \
     cspell link add @cspell/dict-companies && \
     cspell link add @cspell/dict-data-science && \
     cspell link add @cspell/dict-docker && \
+    cspell link add @cspell/dict-en-gb && \
+    cspell link add @cspell/dict-en-common-misspellings && \
     cspell link add @cspell/dict-es-es && \
     cspell link add @cspell/dict-git && \
     cspell link add @cspell/dict-google && \
