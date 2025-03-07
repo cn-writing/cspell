@@ -1,11 +1,14 @@
-FROM node:23-alpine
+FROM node:23-bookworm
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # renovate: datasource=npm depName=cspell
 ENV CSPELL_VERSION="8.17.5"
 
 # Install other tools
-RUN apk add --no-cache make
+RUN apt-get update && \
+    apt-get install -y tzdata make  && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN npm install --global npm@latest \
     cspell@${CSPELL_VERSION} \
