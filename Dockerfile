@@ -2,7 +2,7 @@ FROM node:23-bookworm
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # renovate: datasource=npm depName=cspell
-ENV CSPELL_VERSION="8.17.5"
+ENV CSPELL_VERSION="8.18.0"
 
 # Install other tools
 RUN apt-get update && \
