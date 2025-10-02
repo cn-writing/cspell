@@ -10,7 +10,7 @@ ENV CSPELL_VERSION="9.2.1"
 #    Task    https://taskfile.dev/
 RUN curl -1sLf 'https://dl.cloudsmith.io/public/task/task/setup.deb.sh' | bash && \
     apt update && \
-    apt-get install -y git tzdata make  && \
+    apt-get install -y git tzdata make task && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
