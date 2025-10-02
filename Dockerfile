@@ -4,9 +4,13 @@ LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 # renovate: datasource=npm depName=cspell
 ENV CSPELL_VERSION="9.2.1"
 
-# Install other tools
-RUN apt-get update && \
-    apt-get install -y tzdata make  && \
+# Install tools
+#    Git     https://git-scm.com/
+#    Make    https://www.gnu.org/software/make/
+#    Task    https://taskfile.dev/
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/task/task/setup.deb.sh' | bash && \
+    apt update && \
+    apt-get install -y git tzdata make  && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -47,4 +51,3 @@ RUN cspell link add @cspell/dict-aws && \
     cspell link add @cspell/dict-shell && \
     cspell link add @cspell/dict-software-terms && \
     cspell link add @cspell/dict-terraform
-    
