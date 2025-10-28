@@ -1,4 +1,4 @@
-FROM node:23-bookworm
+FROM node:24-bookworm
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # renovate: datasource=npm depName=cspell
